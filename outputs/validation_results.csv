@@ -1,0 +1,5 @@
+rule_name,flagged_transactions,fraud_caught,legitimate_flagged,precision_pct,recall_pct,fraud_value_caught
+D: Product C,15838,2072,13766,13.08,39.1,103842.34
+C: C + Credit,6045,1131,4914,18.71,21.34,61900.62
+A: C + Credit + Amt>=100,502,160,342,31.87,3.02,24034.57
+B: + selected email domains,229,95,134,41.48,1.79,13985.61

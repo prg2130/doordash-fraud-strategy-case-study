@@ -1,0 +1,60 @@
+MARKETPLACE FRAUD STRATEGY PROJECT
+Baseline Analysis Findings
+
+Dataset
+-------
+Total transactions analyzed: 590,540
+
+1. FRAUD PREVALENCE
+
+Fraudulent transactions: 20,663
+Fraud rate: 3.50%
+
+Interpretation:
+Approximately 3.5% of transactions in the dataset were classified as fraudulent.
+
+
+2. TRANSACTION VALUE EXPOSURE
+
+Total transaction value: 79,738,948.74
+Fraud-associated transaction value: 3,083,844.86
+Fraud share of transaction value: 3.87%
+
+Interpretation:
+Fraud accounts for 3.50% of transaction volume but 3.87% of transaction value. This suggests fraud is slightly more concentrated in higher-value transactions.
+
+
+3. AVERAGE TRANSACTION VALUE
+
+Legitimate transactions:
+569,877 transactions
+Average transaction value: 134.51
+
+Fraudulent transactions:
+20,663 transactions
+Average transaction value: 149.24
+
+Interpretation:
+The average fraudulent transaction is larger than the average legitimate transaction.
+
+
+4. INITIAL BUSINESS HYPOTHESIS
+
+Fraud risk does not appear to be evenly distributed across transaction value.
+
+The next stage of the analysis should identify which transaction segments have disproportionately high fraud rates and fraud-associated transaction value.
+
+Potential segmentation dimensions:
+- Product category
+- Transaction value
+- Card network
+- Credit vs debit
+- Email domain
+- Device / identity characteristics
+
+
+IMPORTANT LIMITATION
+
+This is an anonymized e-commerce fraud dataset and is being used as a proxy marketplace dataset for a fraud strategy case study.
+
+The results should not be presented as actual DoorDash data or actual DoorDash fraud rates.

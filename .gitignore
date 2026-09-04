@@ -1,0 +1,18 @@
+# Working screenshots
+*Screenshot*.png# Working screenshots
+Screenshot*.png# Raw data
+data/*.csv
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.venv/
+venv/
+
+# Temporary files
+*.tmp
