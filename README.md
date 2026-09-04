@@ -64,7 +64,50 @@ This approach allows the platform to manage fraud risk without treating every su
 
 ---
 
-## Why Precision Alone Is Misleading
+#### Business Impact Analysis
+
+Fraud detection performance alone does not determine the best strategy. I translated the rule-level results into a simple business impact framework that accounts for:
+
+- expected fraud prevented
+- customer friction from legitimate transactions being flagged
+- operational cost of reviewing or intervening on transactions
+
+Under the base-case assumptions, the estimated net benefit was:
+
+| Rule | Estimated Net Benefit |
+|---|---:|
+| C: Product C + Credit | $18,905.50 |
+| A: Product C + Credit + Amount >= $100 | $17,015.66 |
+| B: + Selected Email Domains | $10,289.49 |
+| D: Product C | -$1,594.13 |
+
+The broad Product C rule captures substantially more fraud, but the cost of flagging legitimate customers outweighs the additional fraud prevented under the base-case assumptions.
+
+### Sensitivity Analysis
+
+The optimal rule changes depending on how costly customer friction is assumed to be:
+
+| Customer Friction Scenario | Preferred Rule | Estimated Net Benefit |
+|---|---|---:|
+| Low friction | D: Product C | $39,703.87 |
+| Base case | C: Product C + Credit | $18,905.50 |
+| High friction | A: Product C + Credit + Amount >= $100 | $15,305.66 |
+
+This suggests that fraud strategy should not rely on a single universal threshold. The appropriate intervention depends on both fraud risk and the business cost of disrupting legitimate customers.
+
+### Recommendation
+
+Use a tiered intervention strategy:
+
+- **Low risk:** Approve the transaction.
+- **Medium risk:** Apply step-up verification.
+- **High risk:** Hold the transaction or require additional verification.
+- **Very high risk:** Decline or route for manual review.
+
+The objective is not simply to maximize fraud caught. It is to maximize expected business value while protecting legitimate customer experience. 
+
+
+Why Precision Alone Is Misleading
 
 The most precise rule in the analysis achieved approximately **41% precision**, but captured less than **2% of total fraud**.
 
