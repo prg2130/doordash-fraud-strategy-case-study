@@ -83,6 +83,7 @@ Under the base-case assumptions, the estimated net benefit was:
 
 The broad Product C rule captures substantially more fraud, but the cost of flagging legitimate customers outweighs the additional fraud prevented under the base-case assumptions.
 
+
 ### Sensitivity Analysis
 
 The optimal rule changes depending on how costly customer friction is assumed to be:
@@ -92,6 +93,9 @@ The optimal rule changes depending on how costly customer friction is assumed to
 | Low friction | D: Product C | $39,703.87 |
 | Base case | C: Product C + Credit | $18,905.50 |
 | High friction | A: Product C + Credit + Amount >= $100 | $15,305.66 |
+
+
+![Business Impact Sensitivity Analysis](charts/business_impact_sensitivity.png)
 
 This suggests that fraud strategy should not rely on a single universal threshold. The appropriate intervention depends on both fraud risk and the business cost of disrupting legitimate customers.
 
